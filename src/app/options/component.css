@@ -1,0 +1,29 @@
+.options {
+    margin-bottom: 20px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.options .form-group .form-control-feedback {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    line-height: 100%;
+    width: 20px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+}
+
+span#manual-feedback {
+    right: 23%;
+}
+
+span#max-cost {
+
+}

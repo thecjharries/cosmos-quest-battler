@@ -1,0 +1,36 @@
+.unit {
+    display: flex;
+    flex-flow: row;
+    min-height: 50px;
+    justify-content: center;
+    background-color: rgba(252, 232, 131, .5);
+}
+
+.unit.valid {
+    background-color: rgba(113, 188, 120, .5);
+}
+
+.dropdowns {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.explanation {
+    text-align: left;
+    height: inherit;
+}
+
+.explanation span {
+    display: block;
+    line-height: 50px;
+}
+
+.status,
+.clear {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+}

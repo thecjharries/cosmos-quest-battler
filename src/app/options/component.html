@@ -1,0 +1,21 @@
+<div class="options row">
+    <div class="form-group col-md-6">
+        <label for="manual-input">Enter a team manually</label>
+        <div class="col-md-12" style="padding: 0;display: flex;flex-flow:row;align-items:center;justify-content:center">
+            <input #teamInput (keyup)="validateInput(teamInput.value)" style="width:80%" type="text" placeholder="eg A3 F2 W4" name="manual-input" class="form-control"/>
+            <button class="btn btn-default" style="width:20%" disabled>Flip</button>
+            <!-- <span id="manual-feedback" class="form-control-feedback"><i class="fa fa-check"></i></span> -->
+        </div>
+    </div>
+    <div [ngClass]="{'form-group col-md-4': true, 'has-success': validCost, 'has-error': !validCost}">
+        <label for="max-cost">Maximum Cost</label>
+<div style="display:flex;flex-flow:row">
+        <input [value]="maximumCost" [formControl]="maxCostControl" class="form-control" type="number" [placeholder]="maxCostPlaceholder" name="max-cost" style="width:80%" />
+        <button class="btn btn-default" style="width:20%" (click)="maximumCost=null" [disabled]="!maximumCost || maximumCost < 1000"><i class="fa fa-times" aria-hidden="true"></i></button>
+        </div>
+    </div>
+    <div class="form-group col-md-2">
+        <label for="max-party">Max Party Size</label>
+        <input [value]="maximumParty" [formControl]="maxPartyControl" class="form-control" type="number" max="6" min="1" value="6" name="max-party"/>
+    </div>
+</div>

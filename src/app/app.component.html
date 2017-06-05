@@ -1,0 +1,13 @@
+<!--The whole content below can be removed with the new code.-->
+<section class="row" style="padding-top:20px;padding-bottom:20px;">
+    <h1 class="col-md-12">Cosmos Quest Battle Solver</h1>
+    <p class="col-md-12">
+        This tool was inspired by <a href="https://repl.it/IWY8" target="_blank">a REPL</a> I found <a href="http://www.kongregate.com/forums/910715-cosmos-quest/topics/764932-daily-quest?page=6" target="_blank">on the forums</a>. I wanted a weekend project and this seemed fun. It's still very much a WIP, and I won't guarantee any of the results until I loop back around for testing.
+    </p>
+    <p class="col-md-12">
+        There's not much in the way of elegance here. Beginning with teams of one unit, I check all possible permutations. To reduce computation, I save the outcome of all unsuccessful combats and use those as starting points for the next stage. If at any stage a permutation is successful, I remove it. Unsurprisingly, this leads to a ton of solutions for simples quests, so I track the most and least expensive solutions at each stage. In theory, there are 40<sup>6</sup> permutations, which is <a href="https://www.wolframalpha.com/input/?i=40%5E6" target="_blank">surprisingly small</a>. In practice, a little planning reduces that tremendously.
+    </p>
+</section>
+<options></options>
+<team></team>
+<solution></solution>

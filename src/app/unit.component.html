@@ -1,0 +1,21 @@
+<div [ngClass]="{'unit col-md-12': true, 'valid': isValid}">
+    <div class="status col-md-1">
+        <i [ngClass]="{'fa': true, 'fa-question-circle': isIncomplete, 'fa-check-circle': isValid}"></i>
+    </div>
+    <div class="dropdowns col-md-3">
+    <dropdown
+    [placeholder]="typePlaceholder"
+    [values]="typeValues"
+    (onSelected)="typeSelected($event)"></dropdown>
+    <dropdown
+    [placeholder]="tierPlaceholder"
+    [values]="tierValues"
+    (onSelected)="indexSelected($event)"></dropdown>
+    </div>
+    <div class="explanation col-md-6">
+    <span>This is the <strong>{{ordinal}}</strong> monster you will fight.</span>
+    </div>
+    <div class="clear col-md-1">
+    <button *ngIf="isValid" class="btn btn-warning" (click)="clear()">Clear</button>
+    </div>
+</div>

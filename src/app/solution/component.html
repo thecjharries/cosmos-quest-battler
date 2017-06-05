@@ -1,0 +1,23 @@
+<div class="solution row">
+    <div *ngIf="solutionOptions" class="col-md-12">
+    {{ solutionOptions | json }}
+    </div>
+    <div *ngIf="solutions && !failed" class="col-md-12">
+        <div class="solution-subset row" *ngFor="let row of solutions">
+            <h2 class="col-md-12 .text-center">{{row.index}} in Party</h2>
+            <div class="col-md-6">
+                <h3>Most expensive solution</h3>
+                <p> {{row.max.toString()}}</p>
+                <p> Cost: {{row.max.cost * 100 }}</p>
+            </div>
+            <div class="col-md-6">
+                <h3>Cheapest solution</h3>
+                <p> {{row.min.toString()}}</p>
+                <p> Cost: {{row.min.cost * 100 }}</p>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="pendingSolution" class="col-md-12">
+        If you see this for too long, it's probably because I haven't added graceful failures yet.
+    </div>
+</div>

@@ -1,0 +1,9 @@
+<div class="team row">
+    <unit
+    *ngFor="let unit of units; let i = index"
+     [state]="unit"
+      [index]="i"></unit>
+</div>
+<div [ngClass]="{'solve row': true, 'waiting': isSolving}">
+<button class="btn btn-default" [disabled]="!isTeamValid || isSolving" (click)="tryToSolve()">Search for a solution</button>
+</div>
